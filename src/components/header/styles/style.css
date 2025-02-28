@@ -1,0 +1,35 @@
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5px 5px;
+}
+
+.headerConnection__container{
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTime{
+    color:#FFFFFF;
+    font-family: "SF Pro";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14.32px;
+}
+
+.headerBattery__container{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__text{
+    color:#FFFFFF;
+    font-family: "SF Pro";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.32px;
+}
