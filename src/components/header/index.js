@@ -5,7 +5,7 @@ import bluetooth from "../../assets/images/headersImg/Bluetooth.svg"
 import battery from "../../assets/images/headersImg/Battery.svg"
 
 document.addEventListener("DOMContentLoaded",function Header(){
-    const params = new URLSearchParams({ lang: `${en}` })
+    const params = new URLSearchParams({ lang: "en" })
     
     const app = document.getElementById("app")
     const header = document.createElement("header")
