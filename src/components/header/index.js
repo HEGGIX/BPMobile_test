@@ -3,10 +3,11 @@ import signal from "../../assets/images/headersImg/MobileSignal.svg"
 import wifi from "../../assets/images/headersImg/Wifi.svg"
 import bluetooth from "../../assets/images/headersImg/Bluetooth.svg"
 import battery from "../../assets/images/headersImg/Battery.svg"
+import portugal from "../../languages/pt.json"
+import japan from "../../languages/ja.json"
+import germany from "../../languages/de.json"
 
 document.addEventListener("DOMContentLoaded",function Header(){
-    const params = new URLSearchParams({ lang: "en" })
-    
     const app = document.getElementById("app")
     const header = document.createElement("header")
     header.classList.add("header")
@@ -32,13 +33,25 @@ document.addEventListener("DOMContentLoaded",function Header(){
 
     headerConnection__container.append(headerConnection__img,headerConnection__text,headerWifi__img)
 
-    let language = navigator
-    console.log(language)
+    // let language = navigator
+    // console.log(language)
 
     let headerTime = document.createElement("span")
     headerTime.textContent = "9:41 AM"
     headerTime.classList.add("headerTime")
     headerWrapper.append(headerTime)
+
+    const params = new URLSearchParams(window.location.search)
+    params.append("lang","ja")
+    console.log(params.keys())
+
+    if(params.get("lang") === "pr"){
+        headerTime.textContent = portugal.Continue
+    }else if(params.get("lang") === "ja"){
+        headerTime.textContent = japan.Continue
+    }else if(params.get("lang") === "de"){
+        headerTime.textContent = germany.Continue
+    }
 
     let headerBattery__container = document.createElement("div")
     headerBattery__container.classList.add("headerBattery__container")
