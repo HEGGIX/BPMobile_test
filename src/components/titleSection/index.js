@@ -29,6 +29,11 @@ document.addEventListener("DOMContentLoaded",function TitleSection(){
     //     headerTime.textContent = germany.Continue
     // }
 
+    let lang = "fr";
+    const params = new URLSearchParams()
+    params.set("lang",lang)
+    window.history.replaceState(null,null,`?${params.toString()}`)
+
     const closeBtn = document.createElement("a")
     closeBtn.href = "#"
     const closeBtnImg = document.createElement("img")
@@ -42,9 +47,9 @@ document.addEventListener("DOMContentLoaded",function TitleSection(){
     const regExp = /\*|<br>|\$/g;
 
     const title = document.createElement("h1")
-    if(languageFirstTwo === "en"){
+    if(languageFirstTwo === "en" || lang === "en"){
         title.textContent = `${england["Get Unlimited <br>Access"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "fr"){
+    }else if(languageFirstTwo === "fr" || lang === "fr"){
         title.textContent = `${france["Get Unlimited <br>Access"].replace(regExp, '')}`
     }else if(languageFirstTwo === "de"){
         title.textContent = `${germany["Get Unlimited <br>Access"].replace(regExp, '')}`
