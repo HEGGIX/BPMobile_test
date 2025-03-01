@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded",function TitleSection(){
     //     headerTime.textContent = germany.Continue
     // }
 
-    let lang = "fr";
+    let lang = "ru";
     const params = new URLSearchParams()
     params.set("lang",lang)
-    window.history.replaceState(null,null,`?${params.toString()}`)
+    window.history.pushState(null,null,`?${params.toString()}`)
 
     const closeBtn = document.createElement("a")
     closeBtn.href = "#"
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded",function TitleSection(){
     const regExp = /\*|<br>|\$/g;
 
     const title = document.createElement("h1")
-    if(languageFirstTwo === "en" || lang === "en"){
+    if(languageFirstTwo === "en"){
         title.textContent = `${england["Get Unlimited <br>Access"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "fr" || lang === "fr"){
+    }else if(languageFirstTwo === "fr"||lang === "fr"){
         title.textContent = `${france["Get Unlimited <br>Access"].replace(regExp, '')}`
     }else if(languageFirstTwo === "de"){
         title.textContent = `${germany["Get Unlimited <br>Access"].replace(regExp, '')}`
