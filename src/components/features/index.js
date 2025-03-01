@@ -36,10 +36,10 @@ document.addEventListener("DOMContentLoaded",function Features(){
 
     const regExp = /\*|<br>|&nbsp|;|$/g;
 
-    let lang = "fr";
-    const params = new URLSearchParams()
-    params.set("lang",lang)
-    window.history.pushState(null,null,`?${params.toString()}`)
+    // let lang = "fr";
+    // const params = new URLSearchParams()
+    // params.set("lang",lang)
+    // window.history.pushState(null,null,`?${params.toString()}`)
 
     const featuresText = document.createElement("span")
     featuresText.classList.add("featuresText")

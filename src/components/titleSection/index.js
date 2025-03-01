@@ -29,10 +29,14 @@ document.addEventListener("DOMContentLoaded",function TitleSection(){
     //     headerTime.textContent = germany.Continue
     // }
 
-    let lang = "ru";
-    const params = new URLSearchParams()
-    params.set("lang",lang)
-    window.history.pushState(null,null,`?${params.toString()}`)
+    // let lang = "ru";
+    // const params = new URLSearchParams()
+    // params.set("lang",lang)
+    // window.history.pushState(null,null,`?${params.toString()}`)
+
+    let params = new URLSearchParams(document.location.search);
+    let value = params.get('lang')
+    console.log(value)
 
     const closeBtn = document.createElement("a")
     closeBtn.href = "#"
@@ -49,7 +53,7 @@ document.addEventListener("DOMContentLoaded",function TitleSection(){
     const title = document.createElement("h1")
     if(languageFirstTwo === "en"){
         title.textContent = `${england["Get Unlimited <br>Access"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "fr"||lang === "fr"){
+    }else if(languageFirstTwo === "fr"){
         title.textContent = `${france["Get Unlimited <br>Access"].replace(regExp, '')}`
     }else if(languageFirstTwo === "de"){
         title.textContent = `${germany["Get Unlimited <br>Access"].replace(regExp, '')}`

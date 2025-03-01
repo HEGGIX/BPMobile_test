@@ -1,5 +1,8 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
 
-document.querySelector('#app').innerHTML = ``
+document.addEventListener("DOMContentLoaded",function Features(){
+    let lang = "fr";
+    const params = new URLSearchParams()
+    params.set("lang",lang)
+    window.history.pushState(null,null,`?${params.toString()}`)
+})
