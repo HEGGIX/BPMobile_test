@@ -1,0 +1,17 @@
+.languageChangeWrapper{
+    max-width: 326px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.languageChangeSelect{
+    background: rgb(88, 86, 86);
+    color: #ffff;
+    font-family: "SF Pro";
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -34,27 +34,26 @@ document.addEventListener("DOMContentLoaded",function Features(){
     const preferredLanguage = navigator.languages ? navigator.languages[0] : navigator.language || navigator.userLanguage;
     const languageFirstTwo = preferredLanguage.substr(0,2);
 
-    const regExp = /\*|<br>|&nbsp|;|$/g;
+    let params = new URLSearchParams(document.location.search);
+    let paramsValue = params.get('lang')
 
-    // let lang = "fr";
-    // const params = new URLSearchParams()
-    // params.set("lang",lang)
-    // window.history.pushState(null,null,`?${params.toString()}`)
+    const regExp = /\*|<br>|&nbsp|;|$/g;
 
     const featuresText = document.createElement("span")
     featuresText.classList.add("featuresText")
-    if(languageFirstTwo === "en"){
+    if(languageFirstTwo === "en" || paramsValue === "en"){
         featuresText.textContent = `${england["Unlimited Art <br>Creation"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "fr"){
+    }else if(languageFirstTwo === "fr" || paramsValue === "fr"){
         featuresText.textContent = `${france["Unlimited Art <br>Creation"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "de"){
+    }else if(languageFirstTwo === "de" || paramsValue === "de"){
         featuresText.textContent = `${germany["Unlimited Art <br>Creation"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "es"){
+    }else if(languageFirstTwo === "es" || paramsValue === "es"){
         featuresText.textContent = `${spain["Unlimited Art <br>Creation"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "pr"){
+    }else if(languageFirstTwo === "pr" || paramsValue === "pr"){
         featuresText.textContent = `${portugal["Unlimited Art <br>Creation"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "ja"){
+    }else if(languageFirstTwo === "ja" || paramsValue === "ja"){
         featuresText.textContent = `${japan["Unlimited Art <br>Creation"].replace(regExp, '')}`
+        featuresText.classList.add("smallText")
     }else {
         featuresText.textContent = `${england["Unlimited Art <br>Creation"].replace(regExp, '')}`
     }
@@ -62,17 +61,17 @@ document.addEventListener("DOMContentLoaded",function Features(){
     const featuresText1 = document.createElement("span")
     featuresText1.classList.add("featuresText")
     featuresText1.classList.add("secondText")
-    if(languageFirstTwo === "en"){
+    if(languageFirstTwo === "en" || paramsValue === "en"){
         featuresText1.textContent = `${england["Exclusive <br>Styles"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "fr"){
+    }else if(languageFirstTwo === "fr" || paramsValue === "fr"){
         featuresText1.textContent = `${france["Exclusive <br>Styles"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "de"){
+    }else if(languageFirstTwo === "de" || paramsValue === "de"){
         featuresText1.textContent = `${germany["Exclusive <br>Styles"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "es"){
+    }else if(languageFirstTwo === "es" || paramsValue === "es"){
         featuresText1.textContent = `${spain["Exclusive <br>Styles"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "pr"){
+    }else if(languageFirstTwo === "pr" || paramsValue === "pr"){
         featuresText1.textContent = `${portugal["Exclusive <br>Styles"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "ja"){
+    }else if(languageFirstTwo === "ja" || paramsValue === "ja"){
         featuresText1.textContent = `${japan["Exclusive <br>Styles"].replace(regExp, '')}`
     }else {
         featuresText1.textContent = `${england["Exclusive <br>Styles"].replace(regExp, '')}`
@@ -80,17 +79,17 @@ document.addEventListener("DOMContentLoaded",function Features(){
 
     const featuresText2 = document.createElement("span")
     featuresText2.classList.add("featuresText")
-    if(languageFirstTwo === "en"){
+    if(languageFirstTwo === "en" || paramsValue === "en"){
         featuresText2.textContent = `${england["Magic Avatars <br>With 20% Off"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "fr"){
+    }else if(languageFirstTwo === "fr" || paramsValue === "fr"){
         featuresText2.textContent = `${france["Magic Avatars <br>With 20% Off"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "de"){
+    }else if(languageFirstTwo === "de" || paramsValue === "de"){
         featuresText2.textContent = `${germany["Magic Avatars <br>With 20% Off"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "es"){
+    }else if(languageFirstTwo === "es" || paramsValue === "es"){
         featuresText2.textContent = `${spain["Magic Avatars <br>With 20% Off"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "pr"){
+    }else if(languageFirstTwo === "pr" || paramsValue === "pr"){
         featuresText2.textContent = `${portugal["Magic Avatars <br>With 20% Off"].replace(regExp, '')}`
-    }else if(languageFirstTwo === "ja"){
+    }else if(languageFirstTwo === "ja" || paramsValue === "ja"){
         featuresText2.textContent = `${japan["Magic Avatars <br>With 20% Off"].replace(regExp, '')}`
     }else {
         featuresText2.textContent = `${england["Magic Avatars <br>With 20% Off"].replace(regExp, '')}`
