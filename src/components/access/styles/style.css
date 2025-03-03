@@ -17,11 +17,15 @@
 }
 
 .year{
-    border-image-source: linear-gradient(to right top, transparent 30%, transparent 70%,#BC1FEF 0%, #0035FF 100%);
-    border-image-slice: 1;
+    /* border-image-source: linear-gradient(to right top, transparent 30%, transparent 70%,#BC1FEF 0%, #0035FF 100%);
+    border-image-slice: 1; */
 }
 
-.accessItem:hover{
+.year::before{
+
+}
+
+.active{
     height: 54px;
     background: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 1)

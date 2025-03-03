@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded",function Access(){
     const accessWeeklyItem = document.createElement("div")
     accessWeeklyItem.classList.add("accessItem")
 
+    accessYearItem.addEventListener("click",() => {
+        accessYearItem.classList.add("active")
+        accessWeeklyItem.classList.remove("active")
+    })
+
+    accessWeeklyItem.addEventListener("click",() => {
+        accessWeeklyItem.classList.add("active")
+        accessYearItem.classList.remove("active")
+    })
+
     const accessYearItemTitleWrapp = document.createElement("div")
     accessYearItemTitleWrapp.classList.add("accessItemTitleWrapp")
     const accessWeeklyItemTitleWrapp = document.createElement("div")
@@ -94,37 +104,37 @@ document.addEventListener("DOMContentLoaded",function Access(){
     const accessYearItemPrice = document.createElement("p")
     accessYearItemPrice.classList.add("accessItemPrice")
     if(languageFirstTwo === "en" || paramsValue === "en"){
-        accessYearItemPrice.textContent = `${england[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessYearItemPrice.textContent = `${england["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "fr" || paramsValue === "fr"){
-        accessYearItemPrice.textContent = `${france[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessYearItemPrice.textContent = `${france["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "de" || paramsValue === "de"){
-        accessYearItemPrice.textContent = `${germany[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessYearItemPrice.textContent = `${germany["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "es" || paramsValue === "es"){
-        accessYearItemPrice.textContent = `${spain[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessYearItemPrice.textContent = `${spain["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "pr" || paramsValue === "pr"){
-        accessYearItemPrice.textContent = `${portugal[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessYearItemPrice.textContent = `${portugal["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "ja" || paramsValue === "ja"){
-        accessYearItemPrice.textContent = `${japan[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessYearItemPrice.textContent = `${japan["{{price}} <br>per week"].replace(regExp, '')}`
     }else {
-        accessYearItemPrice.textContent = england["{{price}} <br>per week"]
+        accessYearItemPrice.textContent = `${england["{{price}} <br>per week"].replace(regExp, '')}`
     }
 
     const accessWeeklyItemPrice = document.createElement("p")
     accessWeeklyItemPrice.classList.add("accessItemPrice")
     if(languageFirstTwo === "en" || paramsValue === "en"){
-        accessWeeklyItemPrice.textContent = `${england[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessWeeklyItemPrice.textContent = `${england["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "fr" || paramsValue === "fr"){
-        accessWeeklyItemPrice.textContent = `${france[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessWeeklyItemPrice.textContent = `${france["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "de" || paramsValue === "de"){
-        accessWeeklyItemPrice.textContent = `${germany[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessWeeklyItemPrice.textContent = `${germany["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "es" || paramsValue === "es"){
-        accessWeeklyItemPrice.textContent = `${spain[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessWeeklyItemPrice.textContent = `${spain["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "pr" || paramsValue === "pr"){
-        accessWeeklyItemPrice.textContent = `${portugal[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessWeeklyItemPrice.textContent = `${portugal["{{price}} <br>per week"].replace(regExp, '')}`
     }else if(languageFirstTwo === "ja" || paramsValue === "ja"){
-        accessWeeklyItemPrice.textContent = `${japan[`{{price}} <br>per week`].replace(regExp, '')}`
+        accessWeeklyItemPrice.textContent = `${japan["{{price}} <br>per week"].replace(regExp, '')}`
     }else {
-        accessWeeklyItemPrice.textContent = england["{{price}} <br>per week"]
+        accessWeeklyItemPrice.textContent = `${england["{{price}} <br>per week"].replace(regExp, '')}`
     }
 
     const continueButton = document.createElement("button")
@@ -144,6 +154,14 @@ document.addEventListener("DOMContentLoaded",function Access(){
     }else {
         continueButton.textContent = england.Continue
     }
+
+    continueButton.addEventListener("click",() => {
+        if(accessYearItem.classList.contains("active")){
+            window.location.href="https://apple.com/"
+        }else if(accessWeeklyItem.classList.contains("active")){
+            window.location.href="https://google.com/" 
+        }
+    })
 
     accessWrapper.append(accessYearItem,accessWeeklyItem,continueButton)
     accessYearItem.append(accessYearItemTitleWrapp,accessYearItemPrice),accessWeeklyItem.append(accessWeeklyItemTitleWrapp,accessWeeklyItemPrice)

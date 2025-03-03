@@ -2,8 +2,8 @@ import "./styles/style.css"
 import cross from "../../assets/images/cross.svg"
 
 document.addEventListener("DOMContentLoaded",function LanguageChange() {
-    const languageArr = ["EN", "DE", "ES", "PR", "FR", "JA"]
-
+    const languageArr = ["EN","DE", "ES", "PR", "FR", "JA"]
+   
     const app = document.getElementById("app")
     const languageChange = document.createElement("div")
     languageChange.classList.add("languageChange")
@@ -20,9 +20,6 @@ document.addEventListener("DOMContentLoaded",function LanguageChange() {
     closeBtnImg.src = `${cross}`
     closeBtn.append(closeBtnImg)
 
-    const languageChangeForm = document.createElement("div")
-    languageChangeForm.classList.add("languageChangeForm")
-
     const languageChangeLabel = document.createElement("label")
     languageChangeLabel.classList.add("languageChangeLabel")
 
@@ -31,27 +28,30 @@ document.addEventListener("DOMContentLoaded",function LanguageChange() {
     languageChangeSelect.name = "languages"
     languageChangeSelect.id = "languages"
 
-    for(let i = 0;i < 1; i++){
-        languageArr.map((option) => {
-            const languageChangeOption = document.createElement("option")
-            languageChangeOption.classList.add("languageChangeOption")
-            languageChangeOption.textContent = option
-            languageChangeOption.value = option.toLocaleLowerCase()
-            languageChangeSelect.append(languageChangeOption)
-        })
-    }
+    languageArr.map((option) => {
+        const languageChangeOption = document.createElement("option")
+        languageChangeOption.classList.add("languageChangeOption")
+        languageChangeOption.textContent = option
+        languageChangeOption.value = option.toLocaleLowerCase()
+        if(languageChangeOption.value === "en" && localStorage.getItem("lang") === null){
+            languageChangeOption.selected = true
+        }
+        languageChangeSelect.append(languageChangeOption)
+    })
 
     languageChangeSelect.addEventListener("change",() => {
         let lang = languageChangeSelect.value
         localStorage.setItem("lang",lang)
-        const params = new URLSearchParams()
+        const params = new URLSearchParams(`?lang=${lang}`)
         params.set("lang",lang)
         window.history.pushState(null,null,`?${params.toString()}`)
         window.location.reload(true);
     })
 
-    languageChangeSelect.value = localStorage.getItem("lang")
+    if(localStorage.getItem("lang") !== null){
+        languageChangeSelect.value = localStorage.getItem("lang")
+    }
 
-    languageChangeForm.append(languageChangeLabel,languageChangeSelect)
-    languageChangeWrapper.append(closeBtn,languageChangeForm)
+    languageChangeLabel.append(languageChangeSelect)
+    languageChangeWrapper.append(closeBtn,languageChangeLabel)
 })

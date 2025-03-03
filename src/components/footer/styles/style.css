@@ -1,0 +1,21 @@
+.footerWrapper{
+    max-width: 281px;
+    margin: 0 auto;
+    margin-top: 28px;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerItem{
+    color: #FFF;
+    font-family: "SF Pro";
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    opacity: 0.3;
+}
