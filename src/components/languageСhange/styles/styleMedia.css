@@ -1,0 +1,14 @@
+@media screen and (width: 414px) and (min-height: 736px){
+    .languageChangeWrapper{
+        margin-top: 25px;
+    }
+
+    .languageChangeLabel{
+        width: 13%;
+    }
+
+    .languageChangeSelect{
+        width: 100%;
+        height: 23px;
+    }
+}

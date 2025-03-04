@@ -1,0 +1,6 @@
+@media screen and (width: 414px) and (min-height: 736px){
+    .footerWrapper{
+        margin-top: 36px;
+        padding-bottom: 13px;
+    }
+}

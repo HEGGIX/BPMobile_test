@@ -1,0 +1,10 @@
+@media screen and (width: 414px) and (min-height: 736px){
+    .title{
+        font-size: 44px;
+        margin: 108px 0px 26px 0px;
+    }
+
+    .title__small-font{
+        font-size: 33px;
+    }
+}

@@ -1,0 +1,15 @@
+@media screen and (width: 414px) and (min-height: 736px){
+    .accessWrapper{
+        margin-top: 33px;
+    }
+
+    .accessItem{
+        height: 62px;
+        margin-bottom: 10px;
+    }
+
+    .accessBestOffer{
+        right: 21px;
+        bottom: 50px;
+    }
+}

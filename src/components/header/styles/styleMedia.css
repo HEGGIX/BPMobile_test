@@ -1,0 +1,21 @@
+@media screen and (width: 414px) and (min-height: 736px){
+    .headerWrapper{
+        padding: 5px 7px;
+    }
+
+    .headerConnection__container{
+        width: 20%;
+    }
+
+    .headerTime{
+        font-size: 13px;
+    }
+
+    .headerBattery__container{
+        width: 18%;
+    }
+
+    .header__text{
+        font-size: 13px;
+    }
+}

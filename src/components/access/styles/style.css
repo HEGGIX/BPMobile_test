@@ -1,5 +1,5 @@
 .accessWrapper{
-    max-width: 326px;
+    max-width: 86.93%;
     margin: 0 auto;
     margin-top: 26px;
 }
@@ -17,12 +17,50 @@
 }
 
 .year{
+    position: relative;
     /* border-image-source: linear-gradient(to right top, transparent 30%, transparent 70%,#BC1FEF 0%, #0035FF 100%);
     border-image-slice: 1; */
 }
 
 .year::before{
 
+}
+
+.accessBestOffer{
+    position: absolute;
+    right: 20px;
+    bottom: 43px;
+    width: 35%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #BC1FEF 0%, #0035FF 100%);
+    color: #FFF;
+    font-family: "SF Pro";
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15.23px;
+}
+
+.accessBestOffer::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(270deg, #00B5FF 0%, #632AF7 53.01%,       #FF96F4 100%);
+    border-radius: 34px;
+    z-index: -1;
+}
+
+.activeBestOffer{
+    background: rgba(255, 255, 255, 1);
+    color: black;
+    border: none;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.5);
 }
 
 .active{

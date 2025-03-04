@@ -1,5 +1,5 @@
 .featuresWrapper{
-    max-width: 326px;
+    max-width: 86.93%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -11,18 +11,22 @@
     height: 139px;
     display: flex;
     align-items: flex-end;
+    border-radius: 12px;
 }
 
 .first{
     background-image: image-set("../../../assets//images/featuresImg/unlimited.png" 1x, "../../../assets//images/featuresImg/unlimited@2x.png" 2x);
+    background-size: cover;
 }
 
 .second{
     background-image: image-set("../../../assets//images/featuresImg/exclusive.png" 1x, "../../../assets//images/featuresImg/exclusive@2x.png" 2x);
+    background-size: cover;
 }
 
 .third{
     background-image: image-set("../../../assets//images/featuresImg/avatars.png" 1x, "../../../assets//images/featuresImg/avatars@2x.png" 2x);
+    background-size: cover;
 }
 
 .featuresText{

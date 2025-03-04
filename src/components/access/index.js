@@ -1,4 +1,5 @@
 import "./styles/style.css"
+import "./styles/styleMedia.css"
 import portugal from "../../languages/pt.json"
 import japan from "../../languages/ja.json"
 import germany from "../../languages/de.json"
@@ -22,14 +23,24 @@ document.addEventListener("DOMContentLoaded",function Access(){
     const accessWeeklyItem = document.createElement("div")
     accessWeeklyItem.classList.add("accessItem")
 
+    const accessBestOffer = document.createElement("div")
+    accessBestOffer.classList.add("accessBestOffer")
+
+    const accessBestOfferText = document.createElement("span")
+    accessBestOfferText.classList.add("accessBestOfferText")
+    accessBestOfferText.textContent = "BEST OFFER"
+    accessBestOffer.append(accessBestOfferText)
+
     accessYearItem.addEventListener("click",() => {
         accessYearItem.classList.add("active")
+        accessBestOffer.classList.add("activeBestOffer")
         accessWeeklyItem.classList.remove("active")
     })
 
     accessWeeklyItem.addEventListener("click",() => {
         accessWeeklyItem.classList.add("active")
         accessYearItem.classList.remove("active")
+        accessBestOffer.classList.remove("activeBestOffer")
     })
 
     const accessYearItemTitleWrapp = document.createElement("div")
@@ -164,6 +175,6 @@ document.addEventListener("DOMContentLoaded",function Access(){
     })
 
     accessWrapper.append(accessYearItem,accessWeeklyItem,continueButton)
-    accessYearItem.append(accessYearItemTitleWrapp,accessYearItemPrice),accessWeeklyItem.append(accessWeeklyItemTitleWrapp,accessWeeklyItemPrice)
+    accessYearItem.append(accessYearItemTitleWrapp,accessBestOffer,accessYearItemPrice),accessWeeklyItem.append(accessWeeklyItemTitleWrapp,accessWeeklyItemPrice)
     accessYearItemTitleWrapp.append(accessYearItemTitle,accessYearItemSubTitle),accessWeeklyItemTitleWrapp.append(accessWeeklyItemTitle)
 })

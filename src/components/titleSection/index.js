@@ -1,4 +1,5 @@
 import "./styles/style.css"
+import "./styles/styleMedia.css"
 import portugal from "../../languages/pt.json"
 import japan from "../../languages/ja.json"
 import germany from "../../languages/de.json"

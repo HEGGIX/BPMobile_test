@@ -1,4 +1,5 @@
 import "./styles/style.css"
+import "./styles/styleMedia.css"
 import signal from "../../assets/images/headersImg/MobileSignal.svg"
 import wifi from "../../assets/images/headersImg/Wifi.svg"
 import bluetooth from "../../assets/images/headersImg/Bluetooth.svg"

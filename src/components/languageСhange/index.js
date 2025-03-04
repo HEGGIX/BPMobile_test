@@ -1,4 +1,5 @@
 import "./styles/style.css"
+import "./styles/styleMedia.css"
 import cross from "../../assets/images/cross.svg"
 
 document.addEventListener("DOMContentLoaded",function LanguageChange() {
